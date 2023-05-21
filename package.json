@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.5.7",
+    "@react-navigation/drawer": "^6.6.2",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/native-stack": "^6.9.12",
     "@tamagui/animations-react-native": "^1.29.1",
@@ -31,7 +32,8 @@
     "react-native-screens": "~3.20.0",
     "react-native-web": "^0.19.4",
     "tamagui": "^1.29.1",
-    "zustand": "^4.3.8"
+    "zustand": "^4.3.8",
+    "react-native-gesture-handler": "~2.9.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
