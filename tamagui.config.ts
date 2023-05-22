@@ -5,6 +5,14 @@ import { shorthands } from "@tamagui/shorthands";
 import { themes, tokens } from "@tamagui/themes";
 import { createTamagui } from "tamagui";
 
+// const myTokens = createTokens({
+// 	...tokens,
+// 	color: {
+// 		black: "#000",
+// 		white: "#fff"
+// 	}
+// });
+
 const animations = createAnimations({
 	bouncy: {
 		type: "spring",
@@ -41,6 +49,10 @@ const config = createTamagui({
 			...themes.dark,
 			color: tokens.color.red11Dark,
 			backgroundColor: tokens.color.red11Dark
+		},
+		light: {
+			color: tokens.color.red11Light,
+			backgroundColor: tokens.color.red11Light
 		}
 	},
 	tokens,
@@ -68,6 +80,6 @@ declare module "tamagui" {
 
 	// work everywhere you import `tamagui`
 
-	interface TamaguiCustomConfig extends AppConfig {}
+	type TamaguiCustomConfig = AppConfig;
 }
 export default config;

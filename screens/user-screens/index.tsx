@@ -45,9 +45,7 @@ export const UserScreens = () => {
 		<Tab.Navigator
 			initialRouteName="Feed"
 			screenOptions={tabNavigationOptions}
-			tabBar={(props) => (
-				<BottomNavigation {...props} routes={routes}  />
-			)}
+			tabBar={(props) => <BottomNavigation {...props} routes={routes} />}
 		>
 			<Tab.Screen name="Feed" component={Feed} />
 			<Tab.Screen name="User-Settings" component={UserSettings} />

@@ -1,4 +1,5 @@
 import { Button, styled } from "tamagui";
+import React from "react";
 
 const BaseButton = styled(Button, {
 	bordered: false,
@@ -8,23 +9,24 @@ const BaseButton = styled(Button, {
 	pressStyle: {
 		backgroundColor: "white"
 	},
-	bg: "$colorTransparent",
+	backgroundColor: "$colorTransparent",
 	borderColor: "$colorTransparent"
 });
 
-interface BottomNavigationButtonProps extends React.ComponentProps<any> {
+interface BottomNavigationButtonProps {
 	isActive?: boolean;
-	children: React.ReactNode;
+	readonly children: React.ReactNode;
+	onPress: () => void;
 }
 
 export const BottomNavigationButton: React.FC<BottomNavigationButtonProps> = ({
 	isActive = false,
-    children,
-    ...props
+	children,
+	...props
 }) => {
 	if (isActive) {
 		return (
-            <BaseButton {...props}  bg="white" color="white">
+			<BaseButton {...props} backgroundColor="white" color="white">
 				{children}
 			</BaseButton>
 		);
