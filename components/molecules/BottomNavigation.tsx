@@ -19,14 +19,14 @@ export const BottomNavigation: React.FC<BottomNavigationProps> = ({
 	state
 }) => {
 	const { navigate } = navigation;
-	const { index,routeNames } = state;
+	const { index, routeNames } = state;
 
 	return (
 		<XStack
 			paddingHorizontal="$10"
 			paddingVertical="$4"
 			justifyContent="space-around"
-			bg="$red1"
+			backgroundColor="$red1"
 		>
 			{routes.map((route) => {
 				console.log(
@@ -39,7 +39,7 @@ export const BottomNavigation: React.FC<BottomNavigationProps> = ({
 						key={route.routeName}
 						isActive={routeNames[index] == route.routeName}
 						onPress={() => {
-							console.log("presseed", route.routeName);
+							// console.log("presseed", route.routeName);
 							navigate(route.routeName as never);
 						}}
 					>

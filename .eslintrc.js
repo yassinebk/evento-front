@@ -4,14 +4,14 @@ module.exports = {
 		node: true,
 		browser: true,
 		es2021: true,
-		"react-native/react-native": true,
-		"jest/globals": true
+		"react-native/react-native": true
 	},
 	extends: [
 		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:react-hooks/recommended",
 		"prettier",
-		"eslint:recommended",
-		"plugin:jest/recommended"
+		"eslint:recommended"
 	],
 
 	parserOptions: {
@@ -22,7 +22,7 @@ module.exports = {
 		sourceType: "module"
 	},
 
-	plugins: ["react", "react-native", "detox"],
+	plugins: ["react", "react-native"],
 	ignorePatterns: ["!.*", "dist", "node_modules"],
 	rules: {
 		indent: [
@@ -36,8 +36,11 @@ module.exports = {
 		"linebreak-style": ["error", "unix"],
 		quotes: ["error", "double"],
 		semi: ["error", "always"],
-		"no-console": ["error"],
-		"no-unused-vars": ["error", { vars: "all" }]
+		"no-console": ["off"],
+		"no-unused-vars": ["error", { vars: "all" }],
+		"react/react-in-jsx-scope": ["off"],
+		"@typescript-eslint/no-empty-interface": ["off"],
+		"no-empty-pattern": ["off"]
 	},
 
 	settings: {

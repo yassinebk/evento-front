@@ -5,18 +5,19 @@ import {
 import Landing from "./Landing";
 import Login from "./Login";
 import Register from "./Register";
+import React from "react";
 
-interface GuestStackParamList {
-	Login: {
-		screen: string;
-	};
-	Register: {
-		screen: string;
-	};
-	Home: {
-		screen: string;
-	};
-}
+// interface GuestStackParamList {
+// 	Login: {
+// 		screen: string;
+// 	};
+// 	Register: {
+// 		screen: string;
+// 	};
+// 	Home: {
+// 		screen: string;
+// 	};
+// }
 
 const Stack = createNativeStackNavigator<any>();
 

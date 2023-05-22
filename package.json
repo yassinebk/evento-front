@@ -7,7 +7,13 @@
 		"android": "expo start --android",
 		"ios": "expo start --ios",
 		"web": "expo start --web",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+		"lint-and-fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix"
+	},
+	"lint-staged": {
+		"**/**/*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+		"**/**/*.{js,jsx,ts,tsx,css,scss,md}": "prettier --write --ignore-unknown"
 	},
 	"dependencies": {
 		"@react-navigation/bottom-tabs": "^6.5.7",
@@ -25,6 +31,7 @@
 		"babel-plugin-transform-inline-environment-variables": "^0.4.4",
 		"expo": "~48.0.15",
 		"expo-font": "^11.1.1",
+		"expo-linear-gradient": "~12.1.2",
 		"expo-status-bar": "~1.4.4",
 		"react": "18.2.0",
 		"react-dom": "^18.2.0",
@@ -39,11 +46,16 @@
 		"zustand": "^4.3.8"
 	},
 	"devDependencies": {
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-react": "^7.32.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"@typescript-eslint/eslint-plugin": "^5.59.7",
+		"@typescript-eslint/parser": "^5.59.7",
 		"@babel/core": "^7.20.0",
 		"@types/react": "~18.0.14",
 		"@types/react-native": "^0.72.0",
 		"eslint": "^8.41.0",
-		"eslint-config-airbnb": "^19.0.4",
+		"eslint-plugin-react-native": "^4.0.0",
 		"husky": "^8.0.3",
 		"lint-staged": "^13.2.2",
 		"prettier": "^2.8.8",
