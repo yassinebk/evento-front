@@ -8,7 +8,6 @@ interface FeedProps {}
 export const Feed: React.FC<FeedProps> = ({}) => {
 	return (
 		<MainLayout>
-			<Header></Header>
 			<XStack>
 				<Search/>
 			</XStack>
