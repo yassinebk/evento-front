@@ -1,5 +1,6 @@
+import { Search } from "@tamagui/lucide-icons";
 import React from "react";
-import { Paragraph } from "tamagui";
+import { XStack } from "tamagui";
 import MainLayout from "../../components/layouts/MainLayout";
 
 interface FeedProps {}
@@ -7,7 +8,10 @@ interface FeedProps {}
 export const Feed: React.FC<FeedProps> = ({}) => {
 	return (
 		<MainLayout>
-			<Paragraph>Feed</Paragraph>
+			<Header></Header>
+			<XStack>
+				<Search/>
+			</XStack>
 		</MainLayout>
 	);
 };
