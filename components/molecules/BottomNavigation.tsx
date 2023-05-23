@@ -1,8 +1,8 @@
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { IconProps } from "@tamagui/lucide-icons/types/IconProps";
 import React from "react";
-import { XStack, YStack } from "tamagui";
-import BottomNavigationButton from "../atoms/BottomNavigationButton";
+import { XStack } from "tamagui";
+import IconButton from "../atoms/IconButton";
 
 export type Route = {
 	routeName: string;
@@ -23,9 +23,9 @@ export const BottomNavigation: React.FC<BottomNavigationProps> = ({
 
 	return (
 		<XStack
-			paddingHorizontal="$10"
+			paddingHorizontal="$6"
 			paddingVertical="$4"
-			justifyContent="space-around"
+			justifyContent="space-between"
 			backgroundColor="$red1"
 		>
 			{routes.map((route) => {
@@ -35,18 +35,17 @@ export const BottomNavigation: React.FC<BottomNavigationProps> = ({
 					route.routeName
 				);
 				return (
-					<BottomNavigationButton
+					<IconButton
 						key={route.routeName}
-						isActive={routeNames[index] == route.routeName}
-						onPress={() => {
-							// console.log("presseed", route.routeName);
+						Icon={route.icon}
+						onPress={function (): void {
 							navigate(route.routeName as never);
 						}}
-					>
-						<YStack alignContent="center">
-							<route.icon size={24} />
-						</YStack>
-					</BottomNavigationButton>
+						size={60}
+						factor={2.5}
+						defaultColor="red"
+						pressedColor="white"
+					></IconButton>
 				);
 			})}
 		</XStack>

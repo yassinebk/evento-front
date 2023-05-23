@@ -1,26 +1,12 @@
 import { AlignLeft } from "@tamagui/lucide-icons";
-import React, { useState } from "react";
-import { Avatar, Button, Paragraph, XStack } from "tamagui";
-
-interface HeaderProps {}
-
-export const Header: React.FC<HeaderProps> = ({}) => {
-	return (
-		<XStack w={"100%"} justifyContent="space-between" alignItems="center">
-			<DrawerButton />
-
-			<Paragraph color="black">Jakarta,Ina</Paragraph>
-			<Avatar circular size="$5">
-				<Avatar.Image src="http://placekitten.com/200/300" />
-				<Avatar.Fallback bc="red" />
-			</Avatar>
-		</XStack>
-	);
-};
+import { useState } from "react";
+import { Button } from "tamagui";
+import React from "react";
 
 interface DrawerButtonProps {
 	onPress?: () => void;
 }
+
 export const DrawerButton: React.FC<DrawerButtonProps> = ({ onPress }) => {
 	const [active, setActive] = useState(false);
 	return (
@@ -40,4 +26,4 @@ export const DrawerButton: React.FC<DrawerButtonProps> = ({ onPress }) => {
 	);
 };
 
-export default Header;
+export default DrawerButton;

@@ -4,9 +4,13 @@ import { YStack } from "tamagui";
 
 interface MainLayoutProps {
 	children: React.ReactNode;
+	paddingHorizontal?: string | number;
 }
 
-export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+export const MainLayout: React.FC<MainLayoutProps> = ({
+	children,
+	paddingHorizontal
+}) => {
 	return (
 		<SafeAreaView>
 			{/* <LinearGradient
@@ -15,7 +19,10 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
 				height={900}
 				width={600}
 			> */}
-			<YStack paddingHorizontal="$4" py={"$5"}>
+			<YStack
+				paddingHorizontal={paddingHorizontal ? paddingHorizontal : "$4"}
+				py={"$5"}
+			>
 				{children}
 			</YStack>
 			{/* </LinearGradient> */}
