@@ -4,8 +4,8 @@ module.exports = function (api) {
 	return {
 		presets: ["babel-preset-expo"],
 		plugins: [
-			// NOTE: this is required to pass the right environment
 			[
+				// NOTE: this is required to pass the right environment
 				"transform-inline-environment-variables",
 				{
 					include: "TAMAGUI_TARGET"
@@ -21,7 +21,36 @@ module.exports = function (api) {
 				}
 			],
 			// NOTE: this is only necessary if you are using reanimated for animations
-			"react-native-reanimated/plugin"
+			"react-native-reanimated/plugin",
+			[
+				"module-resolver",
+				{
+					root: ["./"],
+					alias: {
+						"@components": "./components",
+						"@hooks": "./hooks",
+						"@screens": "./screens",
+						"@fixtures": "./fixtures",
+						"@navigations": "./navigations",
+						"@stores": "./stores"
+					}
+				}
+			]
 		]
 	};
 };
+
+// [
+// 				"module-resolver",
+// 				{
+// 					root: ["./"],
+// 					alias: {
+// 						"@components": "./components",
+// 						"@hooks": "./hooks",
+// 						"@screens": "./screens",
+// 						"@fixtures": "./fixtures",
+// 						"@navigations": "./navigations",
+// 						"@stores": "./stores"
+// 					}
+// 				}
+// 			]

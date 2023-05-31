@@ -1,7 +1,7 @@
 import { useNavigation } from "@react-navigation/native";
 import { ArrowLeft, Share } from "@tamagui/lucide-icons";
 import React from "react";
-import { XStack, useWindowDimensions } from "tamagui";
+import { XStack, useWindowDimensions, styled } from "tamagui";
 import IconButton from "@components/atoms/IconButton";
 import { BlurView } from "expo-blur";
 
@@ -16,6 +16,7 @@ const BackButton = () => {
 
 	return (
 		<IconButton
+			defaultColor="$red1"
 			Icon={ArrowLeft}
 			onPress={navigateBack}
 			size={50}
@@ -24,28 +25,48 @@ const BackButton = () => {
 	);
 };
 
+const BlurViewStyled = styled(BlurView, {
+	position: "absolute",
+	left: 0,
+	right: 0,
+	top: 0,
+	bottom: 0,
+	height: "100%",
+	width: "100%",
+	zIndex: -1
+});
+
 export const Header: React.FC<HeaderProps> = ({}) => {
 	const { width } = useWindowDimensions();
 	return (
 		<XStack
-			zIndex={10}
+			zIndex={60}
 			width={width}
+			// backgroundColor="black"
 			// backgroundColor="black"
 			justifyContent="space-between"
 			alignItems="center"
 			position="absolute"
-			top={30}
-			paddingHorizontal={10}
+			top={20}
+			paddingHorizontal={1}
 			marginHorizontal="auto"
 		>
-			<BlurView />
-			<BackButton />
-			<IconButton
-				Icon={Share}
-				size={50}
-				factor={2.5}
-				onPress={() => console.log("Sharing event")}
-			/>
+			<BlurViewStyled />
+			<XStack
+				width="100%"
+				paddingHorizontal={4}
+				justifyContent="space-between"
+				alignItems="center"
+			>
+				<BackButton />
+				<IconButton
+					Icon={Share}
+					size={50}
+					factor={2.5}
+					defaultColor="$red1"
+					onPress={() => console.log("Sharing event")}
+				/>
+			</XStack>
 		</XStack>
 	);
 };

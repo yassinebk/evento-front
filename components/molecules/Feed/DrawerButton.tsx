@@ -15,10 +15,11 @@ export const DrawerButton: React.FC<DrawerButtonProps> = ({ onPress }) => {
 			onPressOut={() => setActive(false)}
 			onPress={onPress}
 			size={40}
-			bg="$colorTransparent"
+			bg="$backgroundTransparent"
 			color="black"
-			pressStyle={{ backgroundColor: "$red10Light" }}
+			pressStyle={{ backgroundColor: "$red10" }}
 			borderColor="$colorTransparent"
+			borderWidth={0}
 			borderRadius={60}
 		>
 			<AlignLeft size={20} color={active ? "white" : "black"} />

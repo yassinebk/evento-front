@@ -1,14 +1,14 @@
 {
 	"expo": {
-		"name": "evento-front",
-		"slug": "evento-front",
+		"name": "Evento",
+		"slug": "evento",
 		"version": "1.0.0",
 		"orientation": "portrait",
-		"icon": "./assets/icon.png",
+		"icon": "./assets/icon.jpg",
 		"userInterfaceStyle": "light",
 		"splash": {
 			"image": "./assets/splash.png",
-			"resizeMode": "contain",
+			"resizeMode": "cover",
 			"backgroundColor": "#ffffff"
 		},
 		"assetBundlePatterns": ["**/*"],
@@ -17,7 +17,7 @@
 		},
 		"android": {
 			"adaptiveIcon": {
-				"foregroundImage": "./assets/adaptive-icon.png",
+				"foregroundImage": "./assets/adaptive-icon.jpg",
 				"backgroundColor": "#ffffff"
 			}
 		},

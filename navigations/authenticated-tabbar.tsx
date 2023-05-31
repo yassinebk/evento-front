@@ -11,6 +11,7 @@ import Profile from "../screens/user-screens/Profile";
 import Tickets from "../screens/user-screens/Tickets";
 import UserSettings from "../screens/user-screens/UserSettings";
 import { Route } from "../components/molecules/BottomNavigation";
+import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
 
 const Tab = createBottomTabNavigator();
 
@@ -51,12 +52,20 @@ export const UserScreens = () => {
 			screenOptions={tabNavigationOptions}
 			tabBar={(props) => <BottomNavigation {...props} routes={routes} />}
 		>
-			<Tab.Screen name="Feed" component={Feed} />
+			<Tab.Screen
+				name="Feed"
+				component={Feed}
+				options={(route) => ({
+					tabBarStyle: {
+						display: "none"
+					}
+				})}
+			/>
 			<Tab.Screen name="User-Settings" component={UserSettings} />
 			<Tab.Screen name="Profile" component={Profile} />
 			<Tab.Screen name="MyEvents" component={MyEvents} />
 			<Tab.Screen name="Tickets" component={Tickets} />
-			<Tab.Screen name="EventInfo" component={EventInfo} />
+			<Tab.Screen name="EventInfo" component={EventInfo} options={{}} />
 		</Tab.Navigator>
 	);
 };

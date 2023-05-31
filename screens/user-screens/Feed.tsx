@@ -43,6 +43,7 @@ const SearchBar = () => {
 			maxHeight={80}
 			borderRadius={30}
 			paddingHorizontal={24}
+			borderColor="$colorTransparent"
 		>
 			<XStack
 				marginRight={-30}
@@ -57,8 +58,8 @@ const SearchBar = () => {
 				focusStyle={{
 					borderColor: "$colorTransparent"
 				}}
-				// backgroundColor={"$colorTransparent"}
 				borderColor={"$colorTransparent"}
+				borderWidth={0}
 				flex={3}
 				borderRadius={20}
 				paddingLeft={40}
@@ -72,7 +73,7 @@ const SearchBar = () => {
 				alignItems="center"
 				justifyContent="center"
 			>
-				<Settings2 size={20} color="black" />
+				<Settings2 size={20} color="$color" />
 			</Button>
 		</XStack>
 	);

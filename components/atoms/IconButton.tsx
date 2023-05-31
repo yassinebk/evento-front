@@ -9,6 +9,7 @@ interface IconButtonProps {
 	size: number;
 	factor: number;
 	bordered?: boolean;
+	isActive?: boolean;
 }
 
 export const IconButton: React.FC<IconButtonProps> = ({
@@ -18,16 +19,18 @@ export const IconButton: React.FC<IconButtonProps> = ({
 	pressedColor,
 	size,
 	factor,
-	bordered
+	bordered,
+	isActive = false
 }) => {
-	const [active, setActive] = useState(false);
+	const [isPressed, setPressed] = useState(false);
 	return (
 		<Button
+			unstyled
 			borderColor={bordered ? defaultColor : "$colorTransparent"}
 			onPress={onPress}
-			onPressIn={() => setActive(true)}
-			onPressOut={() => setActive(false)}
-			backgroundColor={pressedColor}
+			onPressIn={() => setPressed(true)}
+			onPressOut={() => setPressed(false)}
+			backgroundColor={isPressed || isActive ? defaultColor : pressedColor}
 			pressStyle={{
 				backgroundColor: defaultColor
 			}}
@@ -39,7 +42,7 @@ export const IconButton: React.FC<IconButtonProps> = ({
 		>
 			<XStack justifyContent="center" alignItems="center">
 				<Icon
-					color={active ? pressedColor : defaultColor}
+					color={isPressed || isActive ? pressedColor : defaultColor}
 					size={size / factor}
 				/>
 			</XStack>

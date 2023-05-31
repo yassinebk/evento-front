@@ -9,7 +9,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
 		<XStack w={"100%"} justifyContent="space-between" alignItems="center">
 			<DrawerButton />
 
-			<Paragraph color="black">Jakarta,Ina</Paragraph>
+			<Paragraph color="$color">Jakarta,Ina</Paragraph>
 			<Avatar circular size="$5">
 				<Avatar.Image src="http://placekitten.com/200/300" />
 				<Avatar.Fallback bc="red" />

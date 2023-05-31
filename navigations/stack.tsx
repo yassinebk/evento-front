@@ -6,6 +6,7 @@ import Landing from "@screens/guest-screens/Landing";
 import Login from "@screens/guest-screens/Login";
 import Register from "@screens/guest-screens/Register";
 import React from "react";
+import DrawerNavigation from "./drawer-navigation";
 
 const Stack = createNativeStackNavigator<any>();
 
@@ -23,12 +24,10 @@ export const GuestScreens: React.FC<GuestScreensProps> = ({
 }) => {
 	return (
 		<Stack.Navigator
-			initialRouteName="Authenticated"
+			initialRouteName="Guest"
 			screenOptions={stackNavigationOptions}
 		>
-			<Stack.Screen name="Home" component={Landing} />
-			<Stack.Screen name="Login" component={Login} />
-			<Stack.Screen name="Register" component={Register} />
+		<Stack.Screen name="Guest" component={DrawerNavigation} />	
 			<Stack.Screen name="Authenticated" component={AuthenticatedNavigation} />
 		</Stack.Navigator>
 	);

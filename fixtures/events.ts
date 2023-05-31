@@ -7,6 +7,7 @@ export interface EventX {
 	tags: string[];
 	description: string;
 	organizer: string;
+	price: string;
 }
 
 export const EventXs: EventX[] = [
@@ -18,7 +19,8 @@ export const EventXs: EventX[] = [
 		image: "https://example.com/music-festival.jpg",
 		tags: ["music", "festival"],
 		description: "Join us for a night of music and fun in Central Park!",
-		organizer: "New York Music Association"
+		organizer: "New York Music Association",
+		price: "10.00"
 	},
 	{
 		id: 2,
@@ -29,7 +31,8 @@ export const EventXs: EventX[] = [
 		tags: ["comedy", "stand-up"],
 		description:
 			"Get ready to laugh with some of the best comedians in the city!",
-		organizer: "New York Comedy Association"
+		organizer: "New York Comedy Association",
+		price: "25.00"
 	},
 	{
 		id: 3,
@@ -40,7 +43,8 @@ export const EventXs: EventX[] = [
 		tags: ["art", "exhibition"],
 		description:
 			"Experience the beauty and creativity of some of the world's most talented artists!",
-		organizer: "New York Art Association"
+		organizer: "New York Art Association",
+		price: "50.50"
 	},
 	{
 		id: 4,
@@ -51,7 +55,9 @@ export const EventXs: EventX[] = [
 		tags: ["food", "festival "],
 		description:
 			"Satisfy your taste buds with a variety of delicious foods from around the world!",
-		organizer: "New York Food Association"
+		organizer: "New York Food Association",
+
+		price: "150.50"
 	},
 	{
 		id: 5,
@@ -62,7 +68,9 @@ export const EventXs: EventX[] = [
 		tags: ["film", "festival"],
 		description:
 			"Experience the magic of cinema with some of the best films from around the world!",
-		organizer: "New York Film Association"
+		organizer: "New York Film Association",
+
+		price: "20.50"
 	},
 	{
 		id: 6,
@@ -73,7 +81,8 @@ export const EventXs: EventX[] = [
 		tags: ["tech", "conference"],
 		description:
 			"Learn about the latest trends and innovations in the world of technology!",
-		organizer: "New York Tech Association"
+		organizer: "New York Tech Association",
+		price: "25.50"
 	},
 	{
 		id: 7,
@@ -84,6 +93,7 @@ export const EventXs: EventX[] = [
 		tags: ["fashion", "show"],
 		description:
 			"Experience the glamour and style of the fashion world with some of the top designers in the industry!",
-		organizer: "New York Fashion Association"
+		organizer: "New York Fashion Association",
+		price: "35.50"
 	}
 ];

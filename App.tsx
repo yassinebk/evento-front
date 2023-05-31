@@ -5,8 +5,8 @@ import { useColorScheme } from "react-native";
 import "react-native-gesture-handler";
 
 import { TamaguiProvider, Theme } from "tamagui";
-import { GuestScreens } from "./screens/guest-screens";
-import { UserScreens } from "./screens/user-screens";
+import { GuestScreens } from "@navigations/stack";
+import { UserScreens } from "@navigations/authenticated-tabbar";
 import config from "./tamagui.config";
 export default function App() {
 	const colorScheme = useColorScheme();
@@ -19,10 +19,15 @@ export default function App() {
 	}
 	return (
 		<TamaguiProvider config={config}>
-			<Theme name={colorScheme === "light" ? "light" : "dark"}>
-				<NavigationContainer>
-					<GuestScreens AuthenticatedNavigation={UserScreens} />
-				</NavigationContainer>
+			<Theme
+				name="light"
+				//name={colorScheme === "light" ? "light" : "dark"}
+			>
+				<Theme name="red">
+					<NavigationContainer>
+						<GuestScreens AuthenticatedNavigation={UserScreens} />
+					</NavigationContainer>
+				</Theme>
 			</Theme>
 		</TamaguiProvider>
 	);
