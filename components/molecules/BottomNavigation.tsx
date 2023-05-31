@@ -35,7 +35,6 @@ export const BottomNavigation: React.FC<BottomNavigationProps> = ({
 			paddingVertical="$4"
 			justifyContent="space-between"
 			backgroundColor="white"
-			
 		>
 			{routes.map((route) => {
 				return (

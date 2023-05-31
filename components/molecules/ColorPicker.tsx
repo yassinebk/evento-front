@@ -14,8 +14,8 @@ const ColorPicker = () => {
 	useEffect(() => {
 		addListener("state", () => setOpen(false));
 
-        return ()=>removeEventListener("state", () => setOpen(false))
-	},[]);
+		return () => removeEventListener("state", () => setOpen(false));
+	}, []);
 
 	return (
 		<YStack space>

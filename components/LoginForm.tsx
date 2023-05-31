@@ -1,14 +1,14 @@
 import React from "react";
 import { ScrollView } from "react-native-gesture-handler";
 import {
-    Button,
-    Form,
-    FormTrigger,
-    Input,
-    Label,
-    Spacer,
-    Spinner,
-    YStack
+	Button,
+	Form,
+	FormTrigger,
+	Input,
+	Label,
+	Spacer,
+	Spinner,
+	YStack
 } from "tamagui";
 
 interface LoginFormProps {}

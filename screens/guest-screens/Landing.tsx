@@ -1,10 +1,6 @@
 import { ArrowRight, PersonStanding } from "@tamagui/lucide-icons";
 import React, { useState } from "react";
-import {
-	Image,
-	StyleSheet,
-	useWindowDimensions
-} from "react-native";
+import { Image, StyleSheet, useWindowDimensions } from "react-native";
 import {
 	Button,
 	Card,

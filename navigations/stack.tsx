@@ -27,7 +27,7 @@ export const GuestScreens: React.FC<GuestScreensProps> = ({
 			initialRouteName="Guest"
 			screenOptions={stackNavigationOptions}
 		>
-		<Stack.Screen name="Guest" component={DrawerNavigation} />	
+			<Stack.Screen name="Guest" component={DrawerNavigation} />
 			<Stack.Screen name="Authenticated" component={AuthenticatedNavigation} />
 		</Stack.Navigator>
 	);

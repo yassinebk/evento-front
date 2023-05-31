@@ -15,9 +15,8 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
 }) => {
 	const { height } = useWindowDimensions();
 	return (
-	
 		<SafeAreaView>
-			<StatusBar/>
+			<StatusBar />
 			{/* <LinearGradient
 				colors={["#28100A", "#39160D", "#43170F", "#4A1910", "#4C1A0F"]}
 				locations={[0.2, 0.4]}

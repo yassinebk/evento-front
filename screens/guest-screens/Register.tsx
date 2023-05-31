@@ -5,9 +5,11 @@ import React from "react";
 interface RegisterProps {}
 
 export const Register: React.FC<RegisterProps> = ({}) => {
-	return <MainLayout>
-		<RegisterForm/>
-	</MainLayout>;
+	return (
+		<MainLayout>
+			<RegisterForm />
+		</MainLayout>
+	);
 };
 
 export default Register;
