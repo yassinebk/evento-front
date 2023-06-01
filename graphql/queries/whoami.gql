@@ -1,0 +1,13 @@
+# Write your query or mutation here
+query WhoAmi {
+	whoAmI {
+		id
+		firstName
+		lastName
+		email
+		phoneNumber
+		role
+		town
+		town
+	}
+}

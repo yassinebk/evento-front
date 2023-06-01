@@ -32,7 +32,9 @@ module.exports = function (api) {
 						"@screens": "./screens",
 						"@fixtures": "./fixtures",
 						"@navigations": "./navigations",
-						"@stores": "./stores"
+						"@stores": "./stores",
+						"@graphql": "./graphql/generated/graphql.tsx",
+						"@utils": "./utils"
 					}
 				}
 			]

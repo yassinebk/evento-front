@@ -1,0 +1,7 @@
+mutation UpdateEventGenre($updateEventGenre: UpdateEventGenreInput!) {
+	updateEventGenre(updateEventGenreInput: $updateEventGenre) {
+		description
+		displayName
+		codeName
+	}
+}

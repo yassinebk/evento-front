@@ -17,7 +17,7 @@ const drawerNavigationOptions: DrawerNavigationOptions = {
 const DrawerNavigation = () => {
 	return (
 		<Drawer.Navigator
-			initialRouteName="Home"
+			initialRouteName="Register"
 			screenOptions={drawerNavigationOptions}
 		>
 			<Drawer.Screen

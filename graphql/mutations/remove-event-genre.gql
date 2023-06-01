@@ -1,0 +1,7 @@
+mutation UpdateEventGenre($id: Int!) {
+	removeEventGenre(id: $id) {
+		description
+		displayName
+		codeName
+	}
+}

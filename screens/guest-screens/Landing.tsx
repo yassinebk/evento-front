@@ -42,8 +42,8 @@ const OnboardingScreen = ({ navigation }: any) => {
 		title: string,
 		description: string,
 		currentPage: number,
-		handleNext,
-		handleRegister
+		handleNext: any,
+		handleRegister: any
 	) => {
 		const { height, width } = useWindowDimensions();
 		return (

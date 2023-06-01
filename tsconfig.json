@@ -8,7 +8,9 @@
 			"@screens/*": ["screens/*"],
 			"@hooks/*": ["hooks/*"],
 			"@fixtures/*": ["fixtures/*"],
-			"@navigations/*": ["navigations/*"]
+			"@navigations/*": ["navigations/*"],
+			"@graphql": ["graphql/generated/graphql.tsx"],
+			"@utils/*": ["utils/*"]
 		}
 	}
 }

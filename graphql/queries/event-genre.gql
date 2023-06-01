@@ -1,0 +1,10 @@
+# Write your query or mutation here
+query EventGenre($id: Int!) {
+	eventGenre(id: $id) {
+		codeName
+		id
+		displayName
+		description
+		displayName
+	}
+}

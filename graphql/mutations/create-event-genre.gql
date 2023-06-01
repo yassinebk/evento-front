@@ -1,0 +1,7 @@
+mutation CreateEventGenre($createEventGenre: CreateEventGenreInput!) {
+	createEventGenre(createEventGenreInput: $createEventGenre) {
+		description
+		displayName
+		codeName
+	}
+}

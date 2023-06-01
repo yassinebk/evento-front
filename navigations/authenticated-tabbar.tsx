@@ -11,7 +11,6 @@ import Profile from "../screens/user-screens/Profile";
 import Tickets from "../screens/user-screens/Tickets";
 import UserSettings from "../screens/user-screens/UserSettings";
 import { Route } from "../components/molecules/BottomNavigation";
-import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
 
 const Tab = createBottomTabNavigator();
 

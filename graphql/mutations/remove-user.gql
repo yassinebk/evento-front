@@ -1,0 +1,10 @@
+mutation RemoveUser($updateUserInput: UpdateUserInput!) {
+	removeUser(updateUserInput: $updateUserInput) {
+		id
+		email
+		phoneNumber
+		role
+		town
+		state
+	}
+}
