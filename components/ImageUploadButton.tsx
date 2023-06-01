@@ -1,9 +1,7 @@
 import { Upload } from "@tamagui/lucide-icons";
 import * as ImagePicker from "expo-image-picker";
 import React, { useState } from "react";
-import { View } from "react-native";
 import { Image, XStack, YStack } from "tamagui";
-import NativeColorPicker from "native-color-picker";
 
 import { Button } from "tamagui";
 

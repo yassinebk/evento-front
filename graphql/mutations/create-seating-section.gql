@@ -1,0 +1,19 @@
+mutation CreateSeatingSection($newSeatingSection: CreateSeatingSectionInput!) {
+	createSeatingSection(createSeatingSectionInput: $newSeatingSection) {
+		id
+		description
+		name
+		description
+		numberOfSeats
+		isSelling
+		event {
+			id
+		}
+		seats {
+			id
+			name
+			userReserved{id}
+			userPurchased{id}
+		}
+	}
+}

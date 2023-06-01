@@ -1,0 +1,5 @@
+mutation RemoveSeat($seatId: Int!) {
+	removeSeat(id: $seatId) {
+		id
+	}
+}

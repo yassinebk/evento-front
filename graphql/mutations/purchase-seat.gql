@@ -1,0 +1,5 @@
+mutation PurchaseSeat($seatId: Int!) {
+	purchaseSeat(seatId: $seatId) {
+		id
+	}
+}

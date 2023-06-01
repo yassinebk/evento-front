@@ -1,0 +1,11 @@
+mutation UpdateSeat($updateSeatInput: UpdateSeatInput!) {
+	updateSeat(updateSeatInput: $updateSeatInput) {
+		id
+		createdAt
+		name
+		price
+		seatingSection {
+            id
+        }
+	}
+}

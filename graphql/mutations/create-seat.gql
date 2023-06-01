@@ -1,0 +1,10 @@
+mutation CreateSeat($newSeatInput: CreateSeatInput!) {
+	createSeat(createSeatInput: $newSeatInput) {
+		id
+		name
+		price
+		seatingSection {
+			id
+		}
+	}
+}

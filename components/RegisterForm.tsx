@@ -16,7 +16,7 @@ import * as z from "zod";
 import { useNavigation } from "@react-navigation/native";
 import InputWithErrors from "./atoms/InputWithErrors";
 
-interface RegisterFormProps {}
+interface RegisterFormProps { }
 
 const registerSchema = z.object({
 	firstName: z.string().min(2, { message: "First name is too short" }),
@@ -28,7 +28,7 @@ const registerSchema = z.object({
 	password: z.string().min(8, { message: "Password is too short" })
 });
 
-export const RegisterForm: React.FC<RegisterFormProps> = ({}) => {
+export const RegisterForm: React.FC<RegisterFormProps> = ({ }) => {
 	const { navigate } = useNavigation();
 	const [signup, { loading }] = useSignUpMutation({
 		onCompleted: () => {

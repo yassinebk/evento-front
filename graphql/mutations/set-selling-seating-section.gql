@@ -1,0 +1,20 @@
+mutation SetSellingSeatingSection($seatingSectionId:Int!){
+  setSellingSeatingSection(seatingSectionId:$seatingSectionId){
+  id
+    name
+    description
+    price
+    numberOfSeats
+    seats{
+      id
+      name
+      price
+      seatingSection{
+        id
+        codeName
+        color
+        description
+      }
+    }
+  }
+}

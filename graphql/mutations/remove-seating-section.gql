@@ -1,0 +1,5 @@
+mutation RemoveSeatingSection($id: Int!) {
+	removeSeatingSection(id: $id) {
+		id
+	}
+}

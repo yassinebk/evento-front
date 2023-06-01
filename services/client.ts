@@ -7,7 +7,7 @@ import {
 
 import { findToken } from "@utils/auth";
 const httpLink = new HttpLink({
-	uri: "https://22a3-41-225-181-101.ngrok-free.app/graphql"
+	uri: "https://fc7a-160-158-207-107.ngrok-free.app/graphql"
 });
 
 const authLink = new ApolloLink((operation, forward) => {

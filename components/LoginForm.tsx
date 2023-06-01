@@ -9,14 +9,14 @@ import { Controller, useForm } from "react-hook-form";
 import InputWithErrors from "./atoms/InputWithErrors";
 import { setAuthToken } from "@utils/auth";
 
-interface LoginFormProps {}
+interface LoginFormProps { }
 
 const loginSchema = z.object({
 	email: z.string(),
 	password: z.string()
 });
 
-export const LoginForm: React.FC<LoginFormProps> = ({}) => {
+export const LoginForm: React.FC<LoginFormProps> = ({ }) => {
 	const { navigate } = useNavigation();
 	const [login, { loading }] = useLoginMutation({
 		onCompleted: async (data) => {
@@ -76,6 +76,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({}) => {
 						render={({ field: { onChange, onBlur, value } }) => (
 							<InputWithErrors
 								label="Password"
+								type="password"
 								name="password"
 								errors={errors}
 								value={value}

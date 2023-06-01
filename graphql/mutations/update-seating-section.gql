@@ -1,0 +1,24 @@
+mutation UpdateSeatingSection(
+	$updateSeatingSection: UpdateSeatingSectionInput!
+) {
+	updateSeatingSection(updateSeatingSectionInput: $updateSeatingSection) {
+		id
+		name
+		description
+		price
+		numberOfSeats
+
+		isSelling
+		event {
+			id
+		}
+		seats {
+			id
+			name
+			price
+			userReserved {
+				id
+			}
+		}
+	}
+}
