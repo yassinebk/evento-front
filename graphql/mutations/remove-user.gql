@@ -1,5 +1,5 @@
-mutation RemoveUser($updateUserInput: UpdateUserInput!) {
-	removeUser(updateUserInput: $updateUserInput) {
+mutation RemoveUser($id: Int!) {
+	removeUser(id: $id) {
 		id
 		email
 		phoneNumber
